@@ -1,1 +1,67 @@
-[]
+[
+    {
+        "received_time": "2024-08-26 12:44:08",
+        "message": "가즈아아아",
+        "sender": "USER2"
+    },
+    {
+        "received_time": "2024-08-26 12:49:06",
+        "message": "아니야",
+        "sender": "USER2"
+    },
+    {
+        "received_time": "2024-08-26 12:49:11",
+        "message": "안녕하세요 여려분 유저1입니다",
+        "sender": "USER1"
+    },
+    {
+        "received_time": "2024-08-26 12:49:14",
+        "message": "오",
+        "sender": "USER3"
+    },
+    {
+        "received_time": "2024-08-26 12:49:16",
+        "message": "되네",
+        "sender": "USER3"
+    },
+    {
+        "received_time": "2024-08-26 12:49:16",
+        "message": "오",
+        "sender": "USER3"
+    },
+    {
+        "received_time": "2024-08-26 12:49:17",
+        "message": "안녕하세요 유저 1입니다",
+        "sender": "USER2"
+    },
+    {
+        "received_time": "2024-08-26 12:49:24",
+        "message": "안녕하세요",
+        "sender": "USER3"
+    },
+    {
+        "received_time": "2024-08-26 12:50:20",
+        "message": " exit",
+        "sender": "USER3"
+    },
+    {
+        "received_time": "2024-08-26 12:50:29",
+        "message": "저 나갈게요",
+        "sender": "USER3"
+    },
+    {
+        "received_time": "2024-08-26 12:50:30",
+        "message": "점심시간",
+        "sender": "USER3"
+    },
+    {
+        "received_time": "2024-08-26 12:50:30",
+        "message": "유흐",
+        "sender": "USER3"
+    },
+    {
+        "received_time": "2024-08-26 12:50:37",
+        "message": "으카카카카카카4",
+        "sender": "USER2"
+    }
+]
