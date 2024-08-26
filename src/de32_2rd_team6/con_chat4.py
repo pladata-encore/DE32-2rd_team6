@@ -2,7 +2,7 @@ from kafka import KafkaConsumer
 from json import loads, dump, json
 from datetime import datetime
 consumer = KafkaConsumer(
-        'chat',
+        'haha',
         bootstrap_servers=['ec2-43-203-210-250.ap-northeast-2.compute.amazonaws.com:9092'],
         auto_offset_reset='earliest',
         enable_auto_commit=True,
@@ -19,14 +19,16 @@ chatting_history=[]
 try:
     for m in consumer:
         data = m.value
+        print(data)
+        sender = data['username']
         formatted_time = datetime.fromtimestamp(data['time']).strftime('%Y-%m-%d %H:%M:%S')
         chatting_log={
             'received_time': formatted_time,
             'message': data['message'],
-            'sender': 'FRIEND'
+            'sender': sender
         }
 
-        print(f"(받은 시간 : {formatted_time}) [FRIEND]: {data['message']}")
+        print(f"(받은 시간 : {formatted_time}) [{sender}]: {data['message']}")
         chatting_history.append(chatting_log)
 except KeyboardInterrupt:
     print("채팅 종료")
