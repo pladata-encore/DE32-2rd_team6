@@ -1,0 +1,17 @@
+[
+    {
+        "received_time": "2024-08-26 12:13:00",
+        "message": "hi",
+        "sender": "FRIEND"
+    },
+    {
+        "received_time": "2024-08-26 12:13:05",
+        "message": "test",
+        "sender": "FRIEND"
+    },
+    {
+        "received_time": "2024-08-26 12:13:08",
+        "message": "test test",
+        "sender": "FRIEND"
+    }
+]
