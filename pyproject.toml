@@ -1,0 +1,15 @@
+[project]
+name = "DE32-2rd_team6"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "thephunkmonk", email = "andrewchoi1218@gmail.com"},
+]
+dependencies = []
+requires-python = "==3.8.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
