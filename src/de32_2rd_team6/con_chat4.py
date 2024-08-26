@@ -6,7 +6,7 @@ consumer = KafkaConsumer(
         bootstrap_servers=['ec2-43-203-210-250.ap-northeast-2.compute.amazonaws.com:9092'],
         auto_offset_reset='earliest',
         enable_auto_commit=True,
-        group_id='chat-group',
+        group_id='chat-group4',
         value_deserializer=lambda x: loads(x.decode('utf8'))
         
 )
