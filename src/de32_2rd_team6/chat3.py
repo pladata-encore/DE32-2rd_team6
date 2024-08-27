@@ -18,8 +18,8 @@ consumer = KafkaConsumer(
     'haha',
     bootstrap_servers=['ec2-43-203-210-250.ap-northeast-2.compute.amazonaws.com:9092'],
     auto_offset_reset='earliest',
-    enable_auto_commit=True,
-    group_id='chat-group6',
+    #enable_auto_commit=True,
+    #group_id='chat_group_E',
     value_deserializer=lambda x: loads(x.decode('utf-8'))
 )
 
@@ -42,8 +42,8 @@ class ChatApp(App):
             return
 
         # GUI에 새로운 메시지를 추가
-#        new_content = f"{self.chat_content.renderable}\nYou: {message.value}"
-#        self.chat_content.update(new_content)
+        new_content = f"{self.chat_content.renderable}\nYou: {message.value}"
+        self.chat_content.update(new_content)
 
         # Kafka 프로듀서를 통해 메시지 전송
         data = {'username': "USER3", 'message': message.value, 'time': time.time()}
@@ -51,6 +51,7 @@ class ChatApp(App):
         producer.flush()
 
         self.query_one(Input).value = ""
+    
     def on_message_received(self, message):
         sender = message['username']
         formatted_time = datetime.fromtimestamp(message['time']).strftime('%Y-%m-%d %H:%M:%S')
