@@ -1,7 +1,13 @@
 from kafka import KafkaConsumer
 from json import loads, dump
 from datetime import datetime
+#import json
 import sys
+
+import sys
+
+sys.stdout.reconfigure(encoding='utf-8')
+
 consumer = KafkaConsumer(
         'haha',
         bootstrap_servers=['ec2-43-203-210-250.ap-northeast-2.compute.amazonaws.com:9092'],
@@ -9,7 +15,7 @@ consumer = KafkaConsumer(
         enable_auto_commit=True,
         group_id='chat-group4',
         value_deserializer=lambda x: loads(x.decode('utf8'))
-        
+
 )
 
 print("채팅 프로그램 - 메시지 수신")
@@ -20,7 +26,6 @@ chatting_history=[]
 try:
     for m in consumer:
         data = m.value
-        print(data)
         sender = data['username']
         formatted_time = datetime.fromtimestamp(data['time']).strftime('%Y-%m-%d %H:%M:%S')
         chatting_log={
@@ -29,13 +34,19 @@ try:
             'sender': sender
         }
 
-        st = print(f"(받은 시간 : {formatted_time}) [{sender}]: {data['message']}")
+        st = f"(받은 시간 : {formatted_time}) [{sender}]: {data['message']}"
         print(st.encode('utf-8', 'ignore').decode('utf-8'))
         chatting_history.append(chatting_log)
+
+    print(chatting_history)
+    print("\n전체 채팅 기록:")
+
+    # 전체 채팅 기록 출력
+    for log in chatting_history:
+        print(f"받은 시간 : {log['received_time']} - [{log['sender']}]: {log['message']}")
+
 except KeyboardInterrupt:
     print("채팅 종료")
 finally:
     consumer.close()
 
-    with open('chatting_log.json', 'w', encoding='utf-8') as file:
-        json.dump(chatting_history, file, indent=4, ensure_ascii=False)
