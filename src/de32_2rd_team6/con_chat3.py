@@ -2,6 +2,10 @@ from kafka import KafkaConsumer
 from json import loads, dump
 from datetime import datetime
 import json
+import sys
+
+sys.stdout.reconfigure(encoding='utf-8')
+
 consumer = KafkaConsumer(
         'haha',
         bootstrap_servers=['ec2-43-203-210-250.ap-northeast-2.compute.amazonaws.com:9092'],
@@ -27,8 +31,8 @@ try:
             'message': data['message'],
             'sender': sender
         }
-
-        print(f"(받은 시간 : {formatted_time}) [{sender}]: {data['message']}")
+        st=f"(받은 시간 : {formatted_time}) [{sender}]: {data['message']}"
+        print(st.encode('utf-8', 'ignore').decode('utf-8'))
 except KeyboardInterrupt:
     print("채팅 종료")
 finally:
