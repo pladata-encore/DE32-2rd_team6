@@ -1,5 +1,5 @@
 from kafka import KafkaConsumer
-from json import loads, dump, json
+from json import loads, dump
 from datetime import datetime
 consumer = KafkaConsumer(
         'haha',
