@@ -20,7 +20,6 @@ chatting_history=[]
 try:
     for m in consumer:
         data = m.value
-        print(data)
         sender = data['username']
         formatted_time = datetime.fromtimestamp(data['time']).strftime('%Y-%m-%d %H:%M:%S')
         chatting_log={
@@ -30,11 +29,7 @@ try:
         }
 
         print(f"(받은 시간 : {formatted_time}) [{sender}]: {data['message']}")
-        chatting_history.append(chatting_log)
 except KeyboardInterrupt:
     print("채팅 종료")
 finally:
     consumer.close()
-
-    with open('chatting_log.json', 'w', encoding='utf-8') as file:
-        json.dump(chatting_history, file, indent=4, ensure_ascii=False)
