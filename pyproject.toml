@@ -5,7 +5,10 @@ description = "Default template for PDM package"
 authors = [
     {name = "EstherCho-7", email = "dkgkqm777@gmail.com"},
 ]
-dependencies = []
+dependencies = [
+    "kafka>=1.3.5",
+    "kafka-python>=2.0.2",
+]
 requires-python = "==3.8.*"
 readme = "README.md"
 license = {text = "MIT"}
