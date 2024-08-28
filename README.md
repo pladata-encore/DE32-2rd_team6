@@ -9,11 +9,10 @@
 
 ## 요구사항 정의서
 ![image](https://github.com/user-attachments/assets/579ae89d-3bbf-40cf-b813-1b8f60b308c4)
-![image](https://github.com/user-attachments/assets/b9266c5d-2d38-4d81-9e56-865b4028f704)
 
 ## 테스트 계획 및 테스트 결과
 ![image](https://github.com/user-attachments/assets/fc30b642-5830-4638-96f0-53f4a3ddb412)
-
+![image](https://github.com/user-attachments/assets/b9266c5d-2d38-4d81-9e56-865b4028f704)
 
 ## 시스템 아키텍쳐
 ![image](https://github.com/user-attachments/assets/639c307e-c10d-4700-8edd-f647df226055)
