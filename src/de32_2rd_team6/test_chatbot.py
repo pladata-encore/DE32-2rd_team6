@@ -19,19 +19,18 @@ def search_movie_in_directories(base_dir, movie_name):
 # Kafka producer를 설정하는 함수
 def send_response_to_kafka(response_message):
     producer = KafkaProducer(
-        #bootstrap_servers=['ec2-43-203-210-250.ap-northeast-2.compute.amazonaws.com:9092'],
-        bootstrap_servers=['localhost:9092'],
+        bootstrap_servers=['ec2-43-203-210-250.ap-northeast-2.compute.amazonaws.com:9092'],
         value_serializer=lambda v: json.dumps(v).encode('utf-8')
     )
-    producer.send('test', value=response_message)
+    producer.send('haha', value=response_message)
     producer.flush()
     producer.close()
 
 # Kafka 메시지를 소비하고, 영화 데이터를 검색한 후, 응답을 전송하는 함수
 def consume_messages():
     consumer = KafkaConsumer(
-        'test',
-        bootstrap_servers=['localhost:9092'],
+        'haha',
+        bootstrap_servers=['ec2-43-203-210-250.ap-northeast-2.compute.amazonaws.com:9092'],
         auto_offset_reset='earliest',
         #enable_auto_commit=True,
         #group_id='chatbot-group',

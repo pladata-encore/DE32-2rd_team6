@@ -4,8 +4,7 @@ import time
 #from datetime import time, timedelta, datetime
 
 p = KafkaProducer(
-    #bootstrap_servers=['ec2-43-203-210-250.ap-northeast-2.compute.amazonaws.com:9092'],
-    bootstrap_servers=['localhost:9092'],
+    bootstrap_servers=['ec2-43-203-210-250.ap-northeast-2.compute.amazonaws.com:9092'],
     value_serializer = lambda x:dumps(x,default=str).encode('utf-8')
 )
 
@@ -18,5 +17,5 @@ while True:
     if msg.lower() == 'exit':
         break
     data = {'username' : username, 'message' : msg, 'time' : time.time()}
-    p.send('test', value = data)
+    p.send('haha', value = data)
     p.flush()
