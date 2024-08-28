@@ -21,8 +21,11 @@
 ```bash
 $ git clone https://github.com/pladata-encore/DE32-2rd_team6
 $ cd DE32-2rd_team6
+
+#option for dev
 $ source .venv/bin/activate
-$ pip install 
+
+$ pip install .
 $ python src/de32_2rd_team6/con_chat3.py
 $ python src/de32_2rd_team6/pro_chat3.py
 ```
