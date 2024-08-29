@@ -67,5 +67,6 @@ $ python src/de32_2rd_team6/pro_chat3.py
 ### Kanban Board 알림
 ![image](https://github.com/user-attachments/assets/4cb5d921-caa2-43b0-8690-1e18060024c4)
 
-
+### 기술 조사
+Konlpy : https://konlpy.org/ko/latest/index.html
 
