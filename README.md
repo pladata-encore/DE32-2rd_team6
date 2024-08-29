@@ -64,5 +64,8 @@ $ python src/de32_2rd_team6/pro_chat3.py
 
 ![image](https://github.com/user-attachments/assets/81e9cd40-1fa6-4769-a6d3-3b7a6fea03f9)
 
+### Kanban Board 알림
+![image](https://github.com/user-attachments/assets/4cb5d921-caa2-43b0-8690-1e18060024c4)
+
 
 
